@@ -1,40 +1,30 @@
-import javax.swing.*;
-import java.text.DecimalFormat;
+public static void main(String[] args) {
 
-public class CircleCalc {
-
-    area();
-
-
-    circumfrence();
-
-    public static void main(String[] args) {
-
-        System.exit(0);
         //call the area method
-
+        area();
         //call the circumference method
-        public static void area(){
-            double radius = Double.parseDouble(JOptionPane.showInputDialog("What is the raidus of the circle?"));
-
-            double area Math.PI * Math.pow(radius, 2);
-
-            JOptionPane.showMessageDialog(null, "The area is " + round.format( area));
+        circumference();
         }
 
-        public static void circumfrence(){
-            double radius = Double.parseDouble(JOptionPane.showInputDialog("What is the raidus of the circle?"));
+//write a method to calculate a circle's area
+public static void area() {
+        DecimalFormat round = new DecimalFormat("#.##");
 
-            double circumfrence = 2 * Math.PI * radius;
+        double radius = Double.parseDouble(JOptionPane.showInputDialog("What is the radius of the circle"));
 
-            JOptionPane.showMessageDialog(null, "The area is " + circumfrence);
+        double area = Math.PI * Math.pow(radius, 2);
 
+        JOptionPane.showMessageDialog(null, "The area is " + area);
         }
-    }
 
-    //write a method to calculate a circle's area
+//write a method to calculate a circle's circumference
+public static void circumference() {
+        DecimalFormat round = new DecimalFormat("#.##");
 
+        double radius = Double.parseDouble(JOptionPane.showInputDialog("What is the radius of the circle"));
 
-    //write a method to calculate a circle's circumference
+        double area = 2 * Math.PI * radius;
 
+        JOptionPane.showMessageDialog(null, "The area is " + area);
+}
 }
